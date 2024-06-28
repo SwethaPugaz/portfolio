@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('5bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.qbody {
+    padding: 20px; /* Adding a white background with some transparency for readability */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+.qcontainer {
+    text-align: center;
+    margin: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #777;
+}
+
+.qbuttons {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.register, .learn-more {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.register:hover, .learn-more:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+}
+
+.left-menu {
+    width: 30%;
+}
+
+.left-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-menu ul li {
+    margin: 10px 0;
+}
+
+.left-menu ul li a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.left-menu ul li a:hover {
+    color: #0056b3;
+}
+
+.right-content {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
